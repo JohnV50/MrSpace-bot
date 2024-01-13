@@ -16,7 +16,7 @@ async def sendinfo(ctx):
             )
 
         # set the server icon
-        send_embed.set_thumbnail(url = "https://media.discordapp.net/attachments/1195211738962989113/1195593232122384384/BloxlinkSpace_logo.jpg?ex=65b48df7&is=65a218f7&hm=901c7f5cf10b7c1d2ddad880bba2d7aaa9f6ddd2120cae7fc24050a02f141140&=&format=webp&width=1060&height=1016")
+        send_embed.set_thumbnail(url = ctx.guild.icon)
                    
         await ctx.send(embed=send_embed)
 
