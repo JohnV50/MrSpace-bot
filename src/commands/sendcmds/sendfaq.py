@@ -16,7 +16,7 @@ async def sendfaq(ctx):
             )
 
         # add new fields
-        send_embed.add_field(name = "• How do I apply for moderator?", value = "Moderator applications are currently closed. When they open, we'll announce them in <#1195211738715537469>.", inline = False)
+        send_embed.add_field(name = "• How do I apply for moderator?", value = "Ask a moderator if applications are open or check <#1195211738715537469> for updates.", inline = False)
 
         send_embed.add_field(name = "• Where can I get support for the Bloxlink bot?", value = "Any issue or question regarding the Bloxlink bot should be asked in Bloxlink HQ. Join here: https://blox.link/support.", inline = False)
 
