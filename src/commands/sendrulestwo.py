@@ -14,8 +14,8 @@ async def sendrulestwo(ctx):
             )
 
         # add new fields
-        send_embed.add_field(name = "", value = "**11.** If you have any issues or questions, you may ping the @Merry Moderators role. Only ping once" + "\n" +
-        "**12.** Keep talking in a different language other than English to a minimum. We prefer English as it’s the language we can moderate in." + "\n" +
+        send_embed.add_field(name = "", value = "**11.** Do not misuse the support tickets." + "\n" +
+        "**12.** You must speak English so we can moderate properly." + "\n" +
         "**13.** Do not ask for Bloxlink bot support here, head to the support server at https://blox.link/support and ask for help there."
         "**14.** Copy pasted and chain mail are prohibited." + "\n" +
         "**15.** Don't spread misinformation." + "\n" +

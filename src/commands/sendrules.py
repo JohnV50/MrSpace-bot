@@ -22,9 +22,9 @@ async def sendrules(ctx):
         "**4.** Don't spam members of this discord or flood the channels with unnecessary messages" + "\n" +
         "**5.** Use common sense, if you know it’s not right then don’t do it." + "\n" +
         "**6.** All rules from the main Bloxlink HQ server apply here as well." + "\n" +
-        "**7.** You're required to be verified on Bloxlink to be considered for future events." + "\n" +
+        "**7.** You're required to be verified on Bloxlink to be considered for specific events." + "\n" +
         "**8.** Keep cursing to a minimum." + "\n" +
-        "**9.** Keep advertising or game links in their appropriate channels." + "\n" +
+        "**9.** No advertising or promoting of any kind." + "\n" +
         "**10.** Don’t ping individual staff members or mass ping other users.", inline = False)
                    
         await ctx.send(embed=send_embed)
