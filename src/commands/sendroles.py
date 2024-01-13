@@ -16,7 +16,7 @@ async def sendroles(ctx):
             )
 
         # add new fields
-        send_embed.add_field(name = "Staff Roles", value = "<:greendot:1195602781139107880> <@&1195211737968939027> - Owner & Developer of Bloxlink" + "\n" + 
+        send_embed.add_field(name = "Staff Roles", value = "<:greendot:1195602781139107880> <@&roleID> - Owner & Developer of Bloxlink" + "\n" + 
         "<:greendot:1195602781139107880> <@&roleID> - Youtuber & COO of Bloxlink" + "\n" +
         "<:greendot:1195602781139107880> <@&roleID> - Manages the server and staff team" + "\n" +
         "<:greendot:1195602781139107880> <@&roleID> - Keeps the Discord server safe and friendly for everyone. Report all issues and ask questions to anyone with this role." + "\n" +
@@ -29,9 +29,15 @@ async def sendroles(ctx):
         "<:blackdot:1195602750487150592> <@&roleID> - Boosters of BloxlinkLIVE! Gets access to a custom channel + a pink shiny role." + "\n" +
         "<:blackdot:1195602750487150592> <@&roleID> - Member with a birthday today! Run ``/set`` to add your birthday to the bot.", inline = False)
 
-        send_embed.add_field(name = "Community Roles", value = "", inline = False)
+        send_embed.add_field(name = "Community Roles", value = "<:yellowdot:1195602675304247296> <@&roleID> - Members who reached level 30 on the Miki bot, long time chatters!" + "\n" + 
+        "<:yellowdot:1195602675304247296> <@&roleID> - Member who reached level 20 on the Miki bot, they're less shy now!" + "\n" +
+        "<:yellowdot:1195602675304247296> <@&roleID> - Members who reached level 10 on the Miki bot, they chat every once n while!" + "\n" +
+        "<:yellowdot:1195602675304247296> <@&roleID> - Member of this server. Everyone gets this role, get new roles by chatting!", inline = False)
 
-        send_embed.add_field(name = "Notification Roles", value = "", inline = False)
+        send_embed.add_field(name = "Notification Roles", value = "<:greydot:1195602718123896843> <@&roleID> - Gets notified when we go live on Youtube or upload Youtube & TikTok videos." + "\n" + 
+        "<:greydot:1195602718123896843> <@&roleID> - Gets notified when we release UGC items, usually at a lower price." + "\n" +
+        "<:greydot:1195602718123896843> <@&roleID> - Gets notified when we post server updates, tweets, giveaways, and everything else." + "\n" +
+        "<:greydot:1195602718123896843> <@&roleID> - Gets notified when we post in <#1195211738962989107>, host game nights, movie nights, and more.", inline = False)
                    
         await ctx.send(embed=send_embed)
 
