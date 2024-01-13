@@ -20,14 +20,23 @@ intents.members = True
 
 class MyBot(commands.Bot):
     async def setup_hook(self):
-        await self.load_extension("commands.sendroles")
-        await self.load_extension("commands.sendrulestwo")
-        await self.load_extension("commands.sendrules")
-        await self.load_extension("commands.sendfaq")
-        await self.load_extension("commands.sendsocial")
-        await self.load_extension("commands.sendserver")
-        await self.load_extension("commands.sendlink")
-        await self.load_extension("commands.sendinfo")
+        # sendcmd stuff
+        await self.load_extension("commands.sendcmds.sendroles")
+        await self.load_extension("commands.sendcmds.sendrulestwo")
+        await self.load_extension("commands.sendcmds.sendrules")
+        await self.load_extension("commands.sendcmds.sendfaq")
+        await self.load_extension("commands.sendcmds.sendsocial")
+        await self.load_extension("commands.sendcmds.sendserver")
+        await self.load_extension("commands.sendcmds.sendlink")
+        await self.load_extension("commands.sendcmds.sendinfo")
+
+        # regular cmds
+        await self.load_extension("commands.ping")
+        await self.load_extension("commands.youtube")
+        await self.load_extension("commands.tiktok")
+        await self.load_extension("commands.twitter")
+        await self.load_extension("commands.roblox")
+
         bot.remove_command('help') # remove the default help command
         await self.load_extension("commands.help") # add my own help command
 
