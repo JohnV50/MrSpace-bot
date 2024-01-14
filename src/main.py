@@ -34,6 +34,9 @@ class MyBot(commands.Bot):
         # reaction roles
         await self.load_extension("commands.reaction_roles")
 
+        # welcome channel
+        await self.load_extension("commands.welcome")
+
         # sendcmd stuff
         await self.load_extension("commands.sendcmds.sendroles")
         await self.load_extension("commands.sendcmds.sendrulestwo")
