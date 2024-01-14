@@ -158,10 +158,8 @@ class ReactionRoles(commands.Cog):
         role_to_change = discord.Object(id=role_to_change)
         try:
             if is_adding:
-                print("adding role?")
                 await member.add_roles(role_to_change)
             else:
-                print("removing role?")
                 await member.remove_roles(role_to_change)
         except (discord.Forbidden, discord.HTTPException):
             logger.warning(f"Could not adjust the roles for {member}.")
