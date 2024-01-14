@@ -5,6 +5,7 @@ from typing import Callable
 
 import discord
 from discord.ext import commands
+from discord.ext.commands import CheckFailure, CommandError, CommandNotFound, Context, MissingRequiredArgument
 from dotenv import load_dotenv
 from motor.motor_asyncio import AsyncIOMotorClient
 
@@ -101,7 +102,7 @@ class MyBot(commands.Bot):
 
 # prefix
 
-bot = MyBot(command_prefix=".", intents=intents)
+bot: MyBot = MyBot(command_prefix=".", intents=intents)
 
 
 # on_message
@@ -109,6 +110,53 @@ bot = MyBot(command_prefix=".", intents=intents)
 async def on_message(message):
     if not message.author.bot:  # check to make sure the author isn't a bot
         await bot.process_commands(message)
+
+
+@bot.event
+async def on_command_error(ctx: Context, error: CommandError):
+    if (ctx.command is not None and ctx.command.has_error_handler()) or (
+        ctx.cog is not None and ctx.cog.has_error_handler()
+    ):
+        # Ignore commands that have their own error handlers.
+        return
+
+    match error:
+        case CommandNotFound():
+            # Get the logger to shush when people mistype a command
+            return
+
+        case CheckFailure():
+            await ctx.reply(
+                content="You do not have permissions to use this command!",
+                mention_author=False,
+                delete_after=5.0,
+                ephemeral=True,
+            )
+
+            if not ctx.interaction:
+                await ctx.message.delete()
+
+        case MissingRequiredArgument():
+            param = error.param.name
+            message = f"You're missing the required {param} argument!"
+
+            await ctx.reply(
+                content=message,
+                mention_author=False,
+                delete_after=5.0,
+                ephemeral=True,
+            )
+
+            if not ctx.interaction:
+                await ctx.message.delete()
+
+        case _ as err:
+            await ctx.reply(
+                content=err,
+                mention_author=False,
+                ephemeral=True,
+            )
+            raise err
 
 
 # token
