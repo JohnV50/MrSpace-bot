@@ -52,7 +52,7 @@ class ReactionRoles(commands.Cog):
         )
 
         # Build the embed description
-        description = []
+        description = ["Select your preferred notifications here!\n"]
         for emote in ReactionRole:
             description.append(f"{emote.emoji} ・ <@&{emote}>")
         embed.description = "\n".join(description)
