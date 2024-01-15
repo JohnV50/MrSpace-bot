@@ -32,37 +32,25 @@ class MyBot(commands.Bot):
         self.mongo: AsyncIOMotorClient = AsyncIOMotorClient(os.getenv("MONGO_URL"))
 
     async def setup_hook(self):
-        # reaction roles
-        await self.load_extension("commands.reaction_roles")
-
-        # welcome channel
-        await self.load_extension("commands.welcome")
 
         # sendcmd stuff
-        await self.load_extension("commands.sendcmds.sendroles")
-        await self.load_extension("commands.sendcmds.sendrulestwo")
-        await self.load_extension("commands.sendcmds.sendrules")
-        await self.load_extension("commands.sendcmds.sendfaq")
-        await self.load_extension("commands.sendcmds.sendsocial")
-        await self.load_extension("commands.sendcmds.sendserver")
-        await self.load_extension("commands.sendcmds.sendlink")
-        await self.load_extension("commands.sendcmds.sendinfo")
-
+        sendcmd_files = os.listdir("src/commands/sendcmds")
+        for file in sendcmd_files:
+            if file.endswith(".py"):
+                await self.load_extension(f"commands.sendcmds.{file[:-3]}")
+        print("Loaded sendcmds")
         # regular cmds
-        await self.load_extension("commands.ping")
-        await self.load_extension("commands.youtube")
-        await self.load_extension("commands.tiktok")
-        await self.load_extension("commands.twitter")
-        await self.load_extension("commands.roblox")
-
-        bot.remove_command("help")  # remove the default help command
-        await self.load_extension("commands.help")  # add my own help command
-
+        bot.remove_command("help")
+        files = os.listdir("src/commands")
+        for file in files:
+            if file.endswith(".py"):
+                await self.load_extension(f"commands.{file[:-3]}")
+        print("Loaded commands")
     async def on_ready(self):
         await bot.change_presence(
             activity=discord.Activity(type=discord.ActivityType.listening, name=".help")
         )  # change bot status
-
+    
     @property
     def uptime(self) -> datetime.timedelta:
         return datetime.datetime.utcnow() - self.started_at
