@@ -4,6 +4,7 @@ import os
 from typing import Callable
 
 import discord
+import certifi
 from discord.ext import commands
 from discord.ext.commands import CheckFailure, CommandError, CommandNotFound, Context, MissingRequiredArgument
 from dotenv import load_dotenv
@@ -29,7 +30,7 @@ class MyBot(commands.Bot):
         super().__init__(*args, **kwargs)
 
         self.started_at: datetime.datetime = datetime.datetime.utcnow()
-        self.mongo: AsyncIOMotorClient = AsyncIOMotorClient(os.getenv("MONGO_URL"))
+        self.mongo: AsyncIOMotorClient = AsyncIOMotorClient(os.getenv("MONGO_URL"), tlsCAFile=certifi.where())
 
     async def setup_hook(self):
 
