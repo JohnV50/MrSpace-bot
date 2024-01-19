@@ -24,6 +24,10 @@ async def sendfaq(ctx):
 
         send_embed.add_field(name = "• How do I report a user or ask a question?", value = "Open a ticket in <#1197739394023571476> for all reports and questions.", inline = False)
 
+        send_embed.add_field(name = "• When is the next stream?", value = "Usually, we'll stream every Saturday around 3:30 pm EST. Get the notifications role in <#923784956436676690> to find out when!", inline = False)
+
+        send_embed.add_field(name = "• Can you play my game on stream?", value = "We don't make any promises! You can suggest your game in <#1020418191471677481> and give us a reason to play it.", inline = False)
+
         send_embed.add_field(name = "• What happened to Bloxlink Space?", value = "Bloxlink Space has been completely rebranded! We've shifted our focus, but we're still a community.", inline = False)
                    
         await ctx.send(embed=send_embed)
