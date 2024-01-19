@@ -16,13 +16,13 @@ async def sendfaq(ctx):
             )
 
         # add new fields
-        send_embed.add_field(name = "• How do I apply for moderator?", value = "Ask a moderator if applications are open or check <#1195211738715537469> for updates.", inline = False)
+        send_embed.add_field(name = "• How do I apply for moderator?", value = "Ask a moderator if applications are open or check <#918212006430011392> for updates.", inline = False)
 
         send_embed.add_field(name = "• Where can I get support for the Bloxlink bot?", value = "Any issue or question regarding the Bloxlink bot should be asked in Bloxlink HQ. Join here: https://blox.link/support.", inline = False)
 
         send_embed.add_field(name = "• Can I get free ROBUX?", value = "No, asking does not get you any robux. We do giveaways, prizes, and events all the time though!", inline = False)
 
-        send_embed.add_field(name = "• How do I report a user or ask a question?", value = "Open a ticket in <#1195211738962989111> for all reports and questions.", inline = False)
+        send_embed.add_field(name = "• How do I report a user or ask a question?", value = "Open a ticket in <#1197739394023571476> for all reports and questions.", inline = False)
 
         send_embed.add_field(name = "• What happened to Bloxlink Space?", value = "Bloxlink Space has been completely rebranded! We've shifted our focus, but we're still a community.", inline = False)
                    
