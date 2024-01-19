@@ -14,10 +14,10 @@ logger = logging.getLogger("Reaction Roles")
 class ReactionRole(IntEnum):
     """Represents all the potential reaction role options the bot can post."""
 
-    UPLOAD_ROLE = 1195211737872470066
-    UGC_ROLE = 1195211737872470065
-    FEED_ROLE = 1195211737872470061
-    FUN_ROLE = 1195211737872470064
+    UPLOAD_ROLE = 972342975726227516
+    UGC_ROLE = 972321030074929182
+    FEED_ROLE = 972342964313522196
+    FUN_ROLE = 923787096018255953
 
     @property
     def emoji(self) -> discord.PartialEmoji:
