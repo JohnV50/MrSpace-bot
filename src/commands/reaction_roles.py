@@ -24,7 +24,7 @@ class ReactionRole(IntEnum):
         """The emoji that corresponds with this ReactionRole enum."""
         match self:
             case self.UPLOAD_ROLE:
-                return discord.PartialEmoji(name="youtube", id=1195878401085554819)
+                return discord.PartialEmoji(name="youtube", id=1185982362945847407)
             case self.UGC_ROLE:
                 return discord.PartialEmoji(name="🎁")
             case self.FEED_ROLE:
