@@ -47,7 +47,7 @@ class WelcomeModule(commands.Cog):
         )
         embed.set_footer(text=f"There are now {guild.member_count} members.")
         embed.set_author(name=guild.name, icon_url=guild.icon.url)
-        embed.set_thumbnail(url=member.avatar.url)
+        embed.set_thumbnail(url=member.avatar.url or member.default_avatar.url)
 
         channel = self.bot.get_channel(int(welcome_channel)) or await self.bot.fetch_channel(
             int(welcome_channel)
