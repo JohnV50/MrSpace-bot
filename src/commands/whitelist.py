@@ -6,10 +6,12 @@ import constants
 @commands.command()
 async def whitelist(ctx, id):
     try:
-        if constants.ADMIN_ROLES not in [role.id for role in ctx.message.author.roles]:
+        if constants.ADMIN_ROLES not in [role.id for role in ctx.author.roles]:
             return await ctx.send("You don't have permission to run this command.")
+        
         if id.isdigit() == False or len(id) < 18:
             return await ctx.send("Provide a valid discord id.")
+        
         data = await ctx.bot.fetch_database_data(
             dict, ctx.guild.id, "question_whitelist"
         )
@@ -19,6 +21,7 @@ async def whitelist(ctx, id):
                 ctx.guild.id, question_whitelist=[id]
             )
             return await ctx.send("User whitelisted.")
+        
         if id in whitelist_data:
             whitelist_data.remove(id)
             await ctx.bot.update_database_item(
