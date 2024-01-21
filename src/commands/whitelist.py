@@ -8,9 +8,11 @@ import constants
 async def whitelist(ctx, id):
     try:
         member_roles = {role.id for role in ctx.author.roles}
-        if constants.ADMIN_ROLES.isdisjoint(member_roles):
-            return await ctx.send("You don't have permission to run this command.")    
-        
+        if ctx.author.id not in constants.ADMIN_ID:
+            if constants.ADMIN_ROLES.isdisjoint(member_roles):
+                return await ctx.send("You don't have permission to run this command.")    
+
+
         if id.isdigit() == False or len(id) < 18:
             return await ctx.send("Provide a valid discord id.")
         
