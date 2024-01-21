@@ -11,8 +11,9 @@ async def question(ctx, *, question):
         if whitelist is None:
             await ctx.bot.update_database_item(ctx.guild.id, question_whitelist=[])
             whitelist = []
-        if constants.ADMIN_ROLES not in [role.id for role in ctx.message.author.roles] or ctx.author.id not in whitelist:
-            return await ctx.send("You don't have permission to run this command.")
+        member_roles = {role.id for role in ctx.author.roles}
+        if constants.ADMIN_ROLES.isdisjoint(member_roles) or ctx.author.id not in whitelist:
+            return await ctx.send("You don't have permission to run this command.") 
         # send the question embed
         send_embed = discord.Embed(
             title = "Question of the Day",
