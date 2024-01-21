@@ -6,14 +6,14 @@ import datetime
 @commands.command()
 async def question(ctx, *, question):
     try:
-        whitelist_data = await ctx.bot.fetch_database_data(dict, ctx.guild.id, "question_whitelist")
-        whitelist = whitelist_data.get("question_whitelist")
-        if whitelist is None:
-            await ctx.bot.update_database_item(ctx.guild.id, question_whitelist=[])
-            whitelist = []
+        data = await ctx.bot.fetch_database_data(dict, str(ctx.guild.id), "question_whitelist")
         member_roles = {role.id for role in ctx.author.roles}
-        if constants.ADMIN_ROLES.isdisjoint(member_roles) or ctx.author.id not in whitelist:
-            return await ctx.send("You don't have permission to run this command.") 
+
+        if constants.ADMIN_ROLES.isdisjoint(member_roles):
+            if str(ctx.author.id) not in data['question_whitelist']:
+                return await ctx.send("You don't have permission to run this command.") 
+        
+
         # send the question embed
         send_embed = discord.Embed(
             title = "Question of the Day",
