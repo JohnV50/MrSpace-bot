@@ -16,7 +16,7 @@ async def sendserver(ctx):
             )
 
         # add new fields
-        send_embed.add_field(name = "<:discord:1195587180328927332> BloxlinkLIVE", value = "https://discord.gg/bloxlinklive", inline = False)
+        send_embed.add_field(name = "<:discord:1195587180328927332> Bloxlink Space", value = "https://discord.gg/bloxlinkspace", inline = False)
 
         send_embed.add_field(name = "<:discord:1195587180328927332> Bloxlink Support", value = "https://discord.gg/bloxlink", inline = False)
 
