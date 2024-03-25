@@ -28,7 +28,7 @@ async def sendfaq(ctx):
 
         send_embed.add_field(name = "• Can you play my game on stream?", value = "We don't make any promises! You can suggest your game in <#1020418191471677481> and give us a reason to play it.", inline = False)
 
-        send_embed.add_field(name = "• What happened to Bloxlink Space?", value = "Bloxlink Space has been completely rebranded! We've shifted our focus, but we're still a community.", inline = False)
+        send_embed.add_field(name = "• Where can I post video ideas?", value = "You can post all video, stream, and server suggestions in <#1020418191471677481>.", inline = False)
                    
         await ctx.send(embed=send_embed)
 
