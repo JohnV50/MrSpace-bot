@@ -37,9 +37,9 @@ async def sendroles(ctx):
         "<:yellowdot:1195602675304247296> <@&925980438839853066> - Everyone gets this role, get new roles by chatting more often!", inline = False)
 
         send_embed.add_field(name = "Notification Roles", value = "<:greydot:1195602718123896843> <@&972342975726227516> - Get notified when we stream or upload Youtube & TikTok videos." + "\n" + 
-        "<:greydot:1195602718123896843> <@&972321030074929182> - Get notified when we release UGC items, usually at a lower price." + "\n" +
+        "<:greydot:1195602718123896843> <@&923787096018255953> - Get notified when we release UGC items, usually at a lower price." + "\n" +
         "<:greydot:1195602718123896843> <@&972342964313522196> - Get notified when we post server updates, giveaways, and everything else." + "\n" +
-        "<:greydot:1195602718123896843> <@&923787096018255953> - Get notified when we post in <#972314536638029894>, host game nights, movie nights, and other fun stuff.", inline = False)
+        "<:greydot:1195602718123896843> <@&972321030074929182> - Get notified when we post in <#972314536638029894>, host game nights, movie nights, and other fun stuff.", inline = False)
                    
         await ctx.send(embed=send_embed)
 

@@ -31,7 +31,7 @@ async def question(ctx, *, question):
         # add new fields
         send_embed.add_field(name = "Sent by", value = ctx.author.mention, inline = False)
         channel = ctx.guild.get_channel(constants.QUESTION_CHANNEL)          
-        await channel.send(content="<@&923787096018255953>",embed=send_embed)
+        await channel.send(content="<@&972321030074929182>",embed=send_embed)
 
 
     # exception handling
