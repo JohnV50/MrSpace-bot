@@ -19,7 +19,6 @@ async def sendroles(ctx):
         send_embed.add_field(name = "Staff Roles", value = 
         "<:greendot:1195602781139107880> <@&927960485830201415> - Youtuber & Community Manager of Bloxlink." + "\n" +
         "<:greendot:1195602781139107880> <@&918213203434025000> - Manages the server, bots, and staff team." + "\n" +
-        "<:greendot:1195602781139107880> <@&1215502003820568637> - Engagement Team; will organize events, activities, and more! " + "\n" +
         "<:greendot:1195602781139107880> <@&967091714529587260> - Keeps the Discord server safe and friendly for everyone. Report all issues and ask questions to anyone with this role." + "\n" +
         "<:greendot:1195602781139107880> <@&1197760912908632127> - Monitors the Youtube stream chatroom by enforcing the rules and keeping it clean." + "\n" +
         "<:greendot:1195602781139107880> <@&1004055579137941625> - Moderator in training. They're learning the ropes to become a full on mod!", inline = False)
