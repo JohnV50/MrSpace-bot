@@ -24,8 +24,6 @@ async def sendroles(ctx):
         "<:greendot:1195602781139107880> <@&1004055579137941625> - Moderator in training. They're learning the ropes to become a full on mod!", inline = False)
 
         send_embed.add_field(name = "Special Roles", value = "<:blackdot:1195602750487150592> <@&918213411718979644> - Special people! Bloxlink developers, bot owners, popular game developers, and more." + "\n" + 
-        "<:blackdot:1195602750487150592> <@&1197764089401835621> - Helps in running our social media accounts like video editors, graphic designers, managers, and asset creators." + "\n" +
-        "<:blackdot:1195602750487150592> <@&1197764165562024057> - Creators of awesome Roblox UGC items. Some created the items in <#1197738606861758505>." + "\n" +
         "<:blackdot:1195602750487150592> <@&1064675925754654780> - Content Creators with a minimum of 10,000 subscribers on Youtube. If you meet this requirement, open a ticket in <#1197739394023571476>." + "\n" +
         "<:blackdot:1195602750487150592> <@&1253740805252841553> - Upcoming Content Creators with a minimum of 1,000 subscribers & Consistent views above 100 on Youtube. If you meet this requirement, open a ticket in <#1197739394023571476>." + "\n" +
         "<:blackdot:1195602750487150592> <@&934392701032472697> - Boosters of Bloxlink Space! Gets access to a private channel and a pink shiny role." + "\n" +
