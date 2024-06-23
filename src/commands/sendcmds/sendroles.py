@@ -27,7 +27,9 @@ async def sendroles(ctx):
         "<:blackdot:1195602750487150592> <@&1197764089401835621> - Helps in running our social media accounts like video editors, graphic designers, managers, and asset creators." + "\n" +
         "<:blackdot:1195602750487150592> <@&1197764165562024057> - Creators of awesome Roblox UGC items. Some created the items in <#1197738606861758505>." + "\n" +
         "<:blackdot:1195602750487150592> <@&1064675925754654780> - Content Creators with a minimum of 10,000 subscribers on Youtube. If you meet this requirement, open a ticket in <#1197739394023571476>." + "\n" +
-        "<:blackdot:1195602750487150592> <@&934392701032472697> - Boosters of BloxlinkLIVE! Gets access to a private channel and a pink shiny role." + "\n" +
+        "<:blackdot:1195602750487150592> <@&1253740805252841553> - Upcoming Content Creators with a minimum of 1,000 subscribers & Consistent views above 100 on Youtube. If you meet this requirement, open a ticket in <#1197739394023571476>." + "\n" +
+        "<:blackdot:1195602750487150592> <@&934392701032472697> - Boosters of Bloxlink Space! Gets access to a private channel and a pink shiny role." + "\n" +
+        "<:blackdot:1195602750487150592> <@&934392701032472697> - Winners of <#1059124890671796234>, they had the best artwork this week!" + "\n" +
         "<:blackdot:1195602750487150592> <@&998055621754617946> - Member with a birthday today! Run ``/set`` to add your birthday to the bot.", inline = False)
 
         send_embed.add_field(name = "Community Roles", value = "<:yellowdot:1195602675304247296> <@&1197769019500003441> - Members who reached level 30 on the Miki bot, they are true veterans!" + "\n" + 
