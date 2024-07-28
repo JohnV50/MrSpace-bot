@@ -23,7 +23,7 @@ async def sendrules(ctx):
         "**5.** Use common sense, if you know it’s not right then don’t do it." + "\n" +
         "**6.** All rules from the main Bloxlink HQ server apply here as well." + "\n" +
         "**7.** You're required to be verified on Bloxlink to be considered for specific events." + "\n" +
-        "**8.** Keep cursing to a minimum." + "\n" +
+        "**8.** Offensive language in any form is prohibited." + "\n" +
         "**9.** No advertising or promoting of any kind." + "\n" +
         "**10.** Don’t ping individual staff members or mass ping other users.", inline = False)
                    
