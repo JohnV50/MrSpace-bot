@@ -16,16 +16,15 @@ async def sendrules(ctx):
             )
 
         # add new fields
-        send_embed.add_field(name = "", value = "**1.** Keep it classy. Don't be rude to anyone or use racist/vulgar language." + "\n" + 
+        send_embed.add_field(name = "", value = "**1.** Be respectful to one another." + "\n" + 
         "**2.** NSFW is prohibited in all forms. keep all content family-friendly." + "\n" + 
         "**3.** Follow all Discord Guidelines & Terms of Service (https://discordapp.com/terms) - (https://discord.com/new/guidelines)" + "\n" + 
         "**4.** Don't spam members of this discord or flood the channels with unnecessary messages" + "\n" +
-        "**5.** Use common sense, if you know it’s not right then don’t do it." + "\n" +
-        "**6.** All rules from the main Bloxlink HQ server apply here as well." + "\n" +
-        "**7.** You're required to be verified on Bloxlink to be considered for specific events." + "\n" +
-        "**8.** Offensive language in any form is prohibited." + "\n" +
-        "**9.** No advertising or promoting of any kind." + "\n" +
-        "**10.** Don’t ping individual staff members or mass ping other users.", inline = False)
+        "**5.** Advertising in the server or DMs is prohibited." + "\n" +
+        "**6.** Offensive language in any form is prohibited." + "\n" +
+        "**7.** Don’t mass ping users, spam channels, or post unwanted content." + "\n" +
+        "**8.** Keep content in their respective channels." + "\n" +
+        "**9.** Don’t ping individual staff members or mass ping other users.", inline = False)
                    
         await ctx.send(embed=send_embed)
 

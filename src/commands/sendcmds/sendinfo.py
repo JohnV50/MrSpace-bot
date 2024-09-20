@@ -10,8 +10,8 @@ async def sendinfo(ctx):
 
         # send the transfer embed
         send_embed = discord.Embed(
-            title = "Welcome to Bloxlink Space!",
-            description = "Bloxlink has multiple communities across Twitter, Youtube, Tiktok, and Discord. So, we've united them into one place, welcome to **Bloxlink Space!**",
+            title = "Welcome to Space Cookie!",
+            description = "Welcome to Space Cookie! Cozy community for all Robloxians to come and chill out, eat some cookies, and hang out!",
             color = 0x7289da,
             )
 
