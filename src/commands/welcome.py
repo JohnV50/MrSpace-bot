@@ -42,7 +42,7 @@ class WelcomeModule(commands.Cog):
         embed = discord.Embed(color=0x7289DA, title=f"Welcome to **{guild.name}**, {member.name}")
         embed.description = (
             f"Hey {member.mention}! Welcome to **{guild.name}**! "
-            f"Select your preferred roles in <#{ROLE_SELECTION_CHANNEL}>.\n\n"
+            f"Select your custom roles on the onboarding screen.\n\n"
             f"Chat with our community in <#{GENERAL_CHAT_CHANNEL}>!"
         )
         embed.set_footer(text=f"There are now {guild.member_count} members.")
