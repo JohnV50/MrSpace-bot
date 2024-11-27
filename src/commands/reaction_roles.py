@@ -14,22 +14,13 @@ logger = logging.getLogger("Reaction Roles")
 class ReactionRole(IntEnum):
     """Represents all the potential reaction role options the bot can post."""
 
-    UPLOAD_ROLE = 972342975726227516
-    UGC_ROLE = 972321030074929182
-    FEED_ROLE = 972342964313522196
-    FUN_ROLE = 923787096018255953
+    MINECRAFT_ROLE = 1209001740461019166
 
     @property
     def emoji(self) -> discord.PartialEmoji:
         """The emoji that corresponds with this ReactionRole enum."""
         match self:
-            case self.UPLOAD_ROLE:
-                return discord.PartialEmoji(name="youtube", id=1185982362945847407)
-            case self.UGC_ROLE:
-                return discord.PartialEmoji(name="🎁")
-            case self.FEED_ROLE:
-                return discord.PartialEmoji(name="📰")
-            case self.FUN_ROLE:
+            case self.MINECRAFT_ROLE:
                 return discord.PartialEmoji(name="🎱")
 
 
@@ -47,12 +38,12 @@ class ReactionRoles(commands.Cog):
             return
 
         embed = discord.Embed(
-            title="◇・PINGS",
+            title="◇・GAMES",
             color=0x546E7A,
         )
 
         # Build the embed description
-        description = ["Select your preferred notifications here!\n"]
+        description = ["Select which role you're into!\n"]
         for emote in ReactionRole:
             description.append(f"{emote.emoji} ・ <@&{emote}>")
         embed.description = "\n".join(description)
