@@ -38,12 +38,12 @@ class ReactionRoles(commands.Cog):
             return
 
         embed = discord.Embed(
-            title="◇・GAMES",
+            title="◇・SELECT YOUR ROLES",
             color=0x546E7A,
         )
 
         # Build the embed description
-        description = ["Select which role you're into!\n"]
+        description = ["These roles open new channels!\n"]
         for emote in ReactionRole:
             description.append(f"{emote.emoji} ・ <@&{emote}>")
         embed.description = "\n".join(description)
