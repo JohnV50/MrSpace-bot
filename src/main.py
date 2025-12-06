@@ -49,7 +49,7 @@ class MyBot(commands.Bot):
         print("Loaded commands")
     async def on_ready(self):
         await bot.change_presence(
-            activity=discord.Activity(type=discord.ActivityType.listening, name=".help")
+            activity=discord.Activity(type=discord.ActivityType.listening, name="-help")
         )  # change bot status
     
     @property
@@ -91,7 +91,7 @@ class MyBot(commands.Bot):
 
 # prefix
 
-bot: MyBot = MyBot(command_prefix=".", intents=intents)
+bot: MyBot = MyBot(command_prefix="-", intents=intents)
 
 
 # on_message
